@@ -16,7 +16,6 @@ function Get-RunningVirtualBox($VM) {
     $pinfo.RedirectStandardOutput = $true
     $pinfo.UseShellExecute = $false
     $pinfo.Arguments = "list runningvms"
-    #$pinfo.Arguments = "$query"
     $p = New-Object System.Diagnostics.Process
     $p.StartInfo = $pinfo
     $p.Start() | Out-Null
